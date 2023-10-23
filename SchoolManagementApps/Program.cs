@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using SchoolManagementApps.BusinessLogic;
+﻿using SchoolManagementApps.BusinessLogic;
 using SchoolManagementApps.DTO;
 using SchoolManagementApps.Entity;
 using SchoolManagementApps.ModelMappers;
@@ -13,6 +11,7 @@ namespace SchoolManagementApps.ConsoleApp
         static void Main(string[] args)
         {
             UserBusinessLogic userBusinessLogic = new UserBusinessLogic();
+            bool hasRegisteredUsers = false;
 
             Console.WriteLine("Welcome to the School Management Application!");
 
@@ -20,7 +19,10 @@ namespace SchoolManagementApps.ConsoleApp
             {
                 Console.WriteLine("\nOptions:");
                 Console.WriteLine("1. Register a New User");
-                Console.WriteLine("2. View Registered Users and Courses");
+                if (hasRegisteredUsers)
+                {
+                    Console.WriteLine("2. View Registered Users and Courses");
+                }
                 Console.WriteLine("3. Exit");
                 Console.Write("Select an option: ");
 
@@ -30,6 +32,7 @@ namespace SchoolManagementApps.ConsoleApp
                 {
                     case "1":
                         RegisterNewUser(userBusinessLogic);
+                        hasRegisteredUsers = true;
                         break;
                     case "2":
                         ViewRegisteredUsersAndCourses(userBusinessLogic);

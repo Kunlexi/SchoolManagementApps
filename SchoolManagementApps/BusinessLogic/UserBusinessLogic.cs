@@ -1,11 +1,8 @@
-﻿using System;
-using SchoolManagementApps.DTO;
+﻿using SchoolManagementApps.DTO;
 using SchoolManagementApps.Entity;
 using SchoolManagementApps.MockDatabase;
-using SchoolManagementApps.Utilities;
-using System.Collections.Generic;
-using System.Linq;
 using SchoolManagementApps.ModelMappers;
+using SchoolManagementApps.Utilities;
 
 namespace SchoolManagementApps.BusinessLogic
 {

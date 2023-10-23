@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SchoolManagementApps.Utilities
+﻿namespace SchoolManagementApps.Utilities
 {
     public enum Role
     {
